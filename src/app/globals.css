@@ -19,12 +19,17 @@
   
   html {
     font-family: Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .btn {
-    @apply font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    @apply font-medium py-3 px-5 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
   }
   
   .btn-primary {
@@ -40,11 +45,11 @@
   }
   
   .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
   }
   
   .container-width {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto w-full;
   }
   
   .card-hover {
@@ -74,8 +79,8 @@
   }
 
   .bubble-head {
-    width: 18rem; /* fits inside the outer 24rem (w-96) circle */
-    height: 18rem;
+    width: clamp(11rem, 42vw, 18rem);
+    height: clamp(11rem, 42vw, 18rem);
     border-radius: 9999px;
     overflow: hidden;
     display: flex;

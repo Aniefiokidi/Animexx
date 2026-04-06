@@ -104,16 +104,16 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="bg-gradient-to-br from-gray-50 to-blue-50 section-padding">
       <div className="container-width">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold gradient-text mb-6">Medical Qualifications & Specializations</h2>
-          <p className="text-medical-gray text-xl max-w-3xl mx-auto leading-relaxed">
+        <div className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-5 sm:mb-6">Medical Qualifications & Specializations</h2>
+          <p className="text-medical-gray text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
             Dr. Aniefiok Idiong's medical education, family medicine specialization, and clinical expertise in primary care and general medicine
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className={`flex justify-center mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gray-100 rounded-xl p-1 flex flex-wrap gap-1">
+        <div className={`flex justify-center mb-10 sm:mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="bg-gray-100 rounded-xl p-1 flex flex-wrap justify-center gap-1 max-w-full">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -131,11 +131,11 @@ const Portfolio = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.title} 
-              className={`bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 ${
+              className={`bg-white p-5 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -145,7 +145,7 @@ const Portfolio = () => {
               </div>
               
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold gradient-text">
+                <h3 className="text-lg sm:text-xl font-bold gradient-text pr-2">
                   {project.title}
                 </h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
@@ -171,10 +171,10 @@ const Portfolio = () => {
         </div>
 
         {/* Achievements Section */}
-        <div className={`mt-16 bg-gradient-to-r from-gray-100 to-gray-200 p-10 rounded-2xl shadow-lg transition-all duration-1000 delay-500 ${
+        <div className={`mt-14 sm:mt-16 bg-gradient-to-r from-gray-100 to-gray-200 p-6 sm:p-10 rounded-2xl shadow-lg transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
             Company Achievements
           </h3>
           <div className="grid md:grid-cols-4 gap-6 text-gray-700">

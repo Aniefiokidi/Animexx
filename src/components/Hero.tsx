@@ -11,7 +11,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="bg-gradient-to-br from-medical-blue via-medical-navy to-medical-teal text-white pt-24 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-medical-blue via-medical-navy to-medical-teal text-white pt-20 sm:pt-24 relative overflow-hidden">
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/30 rounded-full floating-animation"></div>
@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
       
       <div className="container-width section-padding relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="mb-6">
               <img 
@@ -30,26 +30,26 @@ const Hero = () => {
                 className="h-16 w-auto mb-4"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-medical-gold to-white bg-clip-text text-transparent">Dr.(Amb) Aniefiok</span><br />
               <span className="text-white">Idiong</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-4 text-white/90">
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 text-white/90">
               Family Doctor • Medical Consultant • Professional Healthcare • Community Leader
             </p>
-            <p className="text-lg mb-8 leading-relaxed text-white/80">
+            <p className="text-base sm:text-lg mb-7 sm:mb-8 leading-relaxed text-white/80">
               Experienced Family Doctor and medical consultant providing comprehensive primary care
               and professional medical consultations for patients in Lagos, Nigeria.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button 
-                className="btn btn-gold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="btn btn-gold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Started Today
               </button>
               <button 
-                className="btn border-2 border-white text-white hover:bg-white hover:text-gray-800 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="btn border-2 border-white text-white hover:bg-white hover:text-gray-800 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
@@ -62,10 +62,10 @@ const Hero = () => {
                 href={linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-96 h-96 bg-gradient-to-br from-white to-white/20 rounded-full backdrop-blur-sm border border-white/20 floating-animation hover:scale-[1.02] transition-transform duration-300"
+                className="block w-[min(22rem,92vw)] h-[min(22rem,92vw)] sm:w-96 sm:h-96 bg-gradient-to-br from-white to-white/20 rounded-full backdrop-blur-sm border border-white/20 floating-animation hover:scale-[1.02] transition-transform duration-300"
                 aria-label="Open Dr. Aniefiok Idiong LinkedIn profile"
               >
-                <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center">
+                <div className="h-full w-full flex flex-col items-center justify-center px-5 sm:px-8 text-center">
                   <div className="bubble-head">
                     <img
                       src="/face.jpeg"
@@ -74,7 +74,7 @@ const Hero = () => {
                       className="headshot"
                     />
                   </div>
-                  <div className="mt-5 text-medical-navy font-semibold text-2xl">Dr. (Amb) Aniefiok Idiong</div>
+                  <div className="mt-4 sm:mt-5 text-medical-navy font-semibold text-xl sm:text-2xl">Dr. (Amb) Aniefiok Idiong</div>
                   <p className="mt-2 text-sm text-medical-navy/90 leading-relaxed">
                     Family Doctor • Medical Consultant • Community Leader
                   </p>
@@ -84,10 +84,10 @@ const Hero = () => {
                   </div>
                 </div>
               </a>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-medical-gold rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-medical-gold rounded-full flex items-center justify-center shadow-lg">
                 <div className="text-2xl">⭐</div>
               </div>
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#0A66C2] rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-14 h-14 sm:w-20 sm:h-20 bg-[#0A66C2] rounded-full flex items-center justify-center shadow-lg">
                 <div className="text-xl font-bold text-white">in</div>
               </div>
             </div>
@@ -95,7 +95,7 @@ const Hero = () => {
         </div>
         
         {/* Business indicators */}
-        <div className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center">
             <div className="text-3xl font-bold text-medical-gold mb-2">10+</div>
             <div className="text-blue-200">Years Experience</div>

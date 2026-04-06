@@ -24,27 +24,27 @@ const About = () => {
   return (
     <section id="about" className="bg-gray-50 section-padding">
       <div className="container-width">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h2 className="text-4xl font-bold gradient-text mb-8">About Dr. Aniefiok Idiong</h2>
-            <p className="text-medical-gray mb-6 text-lg leading-relaxed">
+            <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-6 sm:mb-8">About Dr. Aniefiok Idiong</h2>
+            <p className="text-medical-gray mb-5 sm:mb-6 text-base sm:text-lg leading-relaxed">
               Dr. Aniefiok Idiong is an experienced Family Doctor and medical consultant
               providing comprehensive healthcare services in Lagos, Nigeria. With specialized training
               in family medicine and extensive experience in medical consultation, Dr. Idiong focuses on primary care, women's health, and professional medical guidance.
             </p>
-            <p className="text-medical-gray mb-6 text-lg leading-relaxed">
+            <p className="text-medical-gray mb-5 sm:mb-6 text-base sm:text-lg leading-relaxed">
               Specializing in women's reproductive health, primary care, and medical consultations,
               Dr. Idiong provides personalized medical attention and professional healthcare guidance,
               with particular expertise in women's health and general practice advisory services.
             </p>
-            <p className="text-medical-gray mb-8 text-lg leading-relaxed">
+            <p className="text-medical-gray mb-7 sm:mb-8 text-base sm:text-lg leading-relaxed">
               Dr. Idiong is committed to creating a comfortable and professional environment where 
               patients can discuss their health concerns and receive quality medical care and expert 
               consultation services.
             </p>
             
             {/* Key Attributes */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-medical-teal rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">✓</span>
@@ -71,12 +71,12 @@ const About = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-white to-accent/5 rounded-xl shadow-lg card-hover border border-white/20">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-white to-accent/5 rounded-xl shadow-lg card-hover border border-white/20">
                 <div className="text-3xl font-bold gradient-text mb-2">10+</div>
                 <div style={{color: 'oklch(0.35 0.15 15)'}} className="font-medium">Years in Business</div>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-white to-accent/5 rounded-xl shadow-lg card-hover border border-white/20">
+              <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-white to-accent/5 rounded-xl shadow-lg card-hover border border-white/20">
                 <div className="text-3xl font-bold gradient-text mb-2">500+</div>
                 <div className="text-medical-gray font-medium">Projects Completed</div>
               </div>
@@ -86,7 +86,7 @@ const About = () => {
           <div className={`flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative">
               <div className="w-full max-w-md">
-                <div className="bg-gradient-to-br from-white to-accent/5 rounded-2xl p-8 text-center border border-accent/10 card-hover">
+                <div className="bg-gradient-to-br from-white to-accent/5 rounded-2xl p-6 sm:p-8 text-center border border-accent/10 card-hover">
                   <div className="card-face mx-auto mb-6 floating-animation">
                     <img
                       src="/face.jpeg"
@@ -114,7 +114,7 @@ const About = () => {
               </div>
               
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-16 bg-medical-gold rounded-full flex items-center justify-center shadow-xl floating-animation">
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-12 sm:w-20 sm:h-16 bg-medical-gold rounded-full flex items-center justify-center shadow-xl floating-animation">
                  <img
                       src="/logo.png"
                       alt="Dr. Aniefiok headshot"
@@ -122,7 +122,7 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-medical-emerald rounded-full flex items-center justify-center shadow-lg floating-animation" style={{ animationDelay: '1s' }}>
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 bg-medical-emerald rounded-full flex items-center justify-center shadow-lg floating-animation" style={{ animationDelay: '1s' }}>
                 <span className="text-white">💡</span>
               </div>
             </div>

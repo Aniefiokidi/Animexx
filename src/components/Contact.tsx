@@ -103,20 +103,20 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-gradient-to-br from-gray-50 to-blue-50 section-padding">
       <div className="container-width">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold gradient-text mb-6">Contact Dr. Aniefiok Idiong</h2>
-          <p className="text-medical-gray text-xl max-w-3xl mx-auto leading-relaxed">
+        <div className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-5 sm:mb-6">Contact Dr. Aniefiok Idiong</h2>
+          <p className="text-medical-gray text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
             Schedule your consultation or get in touch for professional primary care and women's health services
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Contact Information */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-3xl font-bold gradient-text mb-8">Consultation & Contact</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-6 sm:mb-8">Consultation & Contact</h3>
             
             <div className="space-y-8">
-              <div className="flex items-start p-6 bg-white rounded-xl shadow-lg card-hover border border-accent/10">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-accent/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-white to-accent/20 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">📍</span>
                 </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-6 bg-white rounded-xl shadow-lg card-hover border border-teal-100">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-teal-100">
                 <div className="w-12 h-12 bg-gradient-to-r from-medical-teal to-medical-emerald rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">📞</span>
                 </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-6 bg-white rounded-xl shadow-lg card-hover border border-gold-100">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-gold-100">
                 <div className="w-12 h-12 bg-gradient-to-r from-medical-gold to-white rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">✉️</span>
                 </div>
@@ -177,19 +177,19 @@ const Contact = () => {
             </div>
 
             {/* Office Hours */}
-            <div className="mt-8 bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <div className="mt-8 bg-white p-5 sm:p-8 rounded-xl shadow-lg border border-gray-100">
               <h4 className="font-bold text-xl gradient-text mb-6">Business Hours</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="font-medium text-gray-800">Monday - Friday:</span>
                     <span className="text-medical-gray">8:00 AM - 6:00 PM</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="font-medium text-gray-800">Saturday:</span>
                     <span className="text-medical-gray">9:00 AM - 4:00 PM</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="font-medium text-gray-800">Sunday:</span>
                     <span className="text-medical-rose">Closed</span>
                   </div>
@@ -204,8 +204,8 @@ const Contact = () => {
 
           {/* Enhanced Contact Form */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="bg-white p-10 rounded-2xl shadow-2xl border border-gray-100">
-              <h3 className="text-3xl font-bold gradient-text mb-8">Get In Touch With Us</h3>
+            <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-2xl shadow-2xl border border-gray-100">
+              <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-6 sm:mb-8">Get In Touch With Us</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -311,7 +311,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full btn btn-primary text-lg py-4 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-2xl transform hover:-translate-y-1'}`}
+                  className={`w-full btn btn-primary text-base sm:text-lg py-3 sm:py-4 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-2xl transform hover:-translate-y-1'}`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
@@ -334,7 +334,7 @@ const Contact = () => {
         </div>
 
         {/* Quick Contact Actions */}
-        <div className={`mt-16 grid md:grid-cols-3 gap-6 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-12 sm:mt-16 grid md:grid-cols-3 gap-5 sm:gap-6 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center card-hover border border-medical-gold/20">
             <div className="text-3xl mb-4">💬</div>
             <h4 className="font-bold text-medical-emerald mb-3">WhatsApp Consultation</h4>

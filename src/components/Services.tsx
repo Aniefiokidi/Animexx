@@ -101,19 +101,19 @@ const Services = () => {
   return (
     <section id="services" className="bg-white section-padding" aria-labelledby="services-heading">
       <div className="container-width">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 id="services-heading" className="text-4xl font-bold gradient-text mb-6">
+        <div className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 id="services-heading" className="text-3xl sm:text-4xl font-bold gradient-text mb-5 sm:mb-6">
             Medical Services
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{color: 'oklch(0.35 0.15 15)'}}>
+          <p className="text-base sm:text-xl max-w-3xl mx-auto leading-relaxed" style={{color: 'oklch(0.35 0.15 15)'}}>
             Comprehensive women's health care and professional medical consultation services for all your healthcare needs
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Services Navigation */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
               <h3 className="text-2xl font-bold gradient-text mb-6">Our Services</h3>
               <nav className="space-y-2" role="tablist" aria-label="Medical services">
                 {services.map((service, index) => (
@@ -125,7 +125,7 @@ const Services = () => {
                     aria-controls={`service-panel-${index}`}
                     className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
                       activeService === index 
-                        ? 'bg-gradient-to-r from-medical-blue to-medical-teal text-white shadow-lg transform scale-105'
+                        ? 'bg-gradient-to-r from-medical-blue to-medical-teal text-white shadow-lg md:transform md:scale-105'
                         : 'hover:bg-gray-100 hover:text-medical-blue text-medical-gray'
                     }`}
                   >
@@ -145,7 +145,7 @@ const Services = () => {
               id={`service-panel-${activeService}`}
               role="tabpanel"
               aria-labelledby={`service-tab-${activeService}`}
-              className={`bg-white rounded-2xl shadow-xl p-8 transition-all duration-500 ${
+              className={`bg-white rounded-2xl shadow-xl p-5 sm:p-8 transition-all duration-500 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
               }`}
             >
@@ -153,11 +153,11 @@ const Services = () => {
                 <span className="text-3xl" aria-hidden="true">{services[activeService].icon}</span>
               </div>
               
-              <h3 className="text-3xl font-bold gradient-text mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-4">
                 {services[activeService].title}
               </h3>
               
-              <p className="text-medical-gray text-lg mb-6 leading-relaxed">
+              <p className="text-medical-gray text-base sm:text-lg mb-6 leading-relaxed">
                 {services[activeService].description}
               </p>
 
@@ -193,12 +193,12 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className={`mt-16 bg-gradient-to-r from-gray-100 to-gray-200 p-10 rounded-2xl shadow-lg transition-all duration-1000 delay-500 ${
+        <div className={`mt-14 sm:mt-16 bg-gradient-to-r from-gray-100 to-gray-200 p-6 sm:p-10 rounded-2xl shadow-lg transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="text-center text-gray-700">
-            <h3 className="text-3xl font-bold mb-4 text-gray-800">Need Medical Consultation?</h3>
-            <p className="text-xl mb-8 text-gray-600">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">Need Medical Consultation?</h3>
+            <p className="text-base sm:text-xl mb-7 sm:mb-8 text-gray-600">
               Contact us today for professional medical consultation and comprehensive healthcare services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

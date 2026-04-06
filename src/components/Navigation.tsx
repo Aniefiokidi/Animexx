@@ -28,8 +28,8 @@ const Navigation = () => {
         ? 'bg-white/95 backdrop-blur-md shadow-xl' 
         : 'bg-white shadow-lg'
     }`}>
-      <div className="container-width">
-        <div className="flex justify-between items-center py-4">
+      <div className="container-width px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           <div className={`flex items-center space-x-3 transition-all duration-300`}>
             <img 
               src="/logo.png" 
@@ -39,7 +39,7 @@ const Navigation = () => {
               }`}
             />
             <span className={`transition-all duration-300 ${
-              isScrolled ? 'text-lg' : 'text-xl'
+              isScrolled ? 'text-base lg:text-lg' : 'text-lg lg:text-xl'
             } font-bold gradient-text hidden sm:block`}>
              ANIMEXX NIGERIA LIMITED
             </span>
@@ -79,8 +79,8 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-64 pb-4' : 'max-h-0'
+          <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMenuOpen ? 'max-h-80 pb-4' : 'max-h-0'
         }`}>
           {navigation.map((item) => (
             <Link

@@ -35,8 +35,8 @@ const Footer = () => {
   return (
     <footer className="bg-red-200" style={{color: 'oklch(0.35 0.15 15)'}}>
       {/* Main Footer Content */}
-      <div className="container-width py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container-width py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Practice Information */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
@@ -45,7 +45,7 @@ const Footer = () => {
                 alt="ANIMEXX NIGERIA LIMITED Logo" 
                 className="h-12 w-auto"
               />
-            <h3 className="text-2xl font-bold gradient-text bg-gradient-to-r from-red-400 to-medical-rose bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold gradient-text bg-gradient-to-r from-red-400 to-medical-rose bg-clip-text text-transparent">
                ANIMEXX NIGERIA LIMITED
               </h3>
             </div>
@@ -122,7 +122,7 @@ const Footer = () => {
 
       {/* Professional Credentials Bar */}
       <div className="border-t border-white/10">
-        <div className="container-width py-8">
+        <div className="container-width py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div className="p-4">
               <div className="text-2xl font-bold text--primary mb-1">10+</div>
@@ -146,7 +146,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-white/10">
-        <div className="container-width py-6">
+        <div className="container-width py-6 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text--primary text-sm mb-4 md:mb-0">
               © {currentYear} ANIMEXX NIGERIA LIMITED. All rights reserved.
@@ -173,7 +173,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button 
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-medical-gold to-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-r from-medical-gold to-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
         aria-label="Scroll to top"
       >
         <span className="text-white text-lg">↑</span>
