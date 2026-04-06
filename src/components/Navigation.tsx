@@ -60,8 +60,14 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile quick actions */}
+          <div className="md:hidden flex items-center gap-3">
+            <Link
+              href="#contact"
+              className="text-xs font-semibold px-3 py-2 rounded-full bg-medical-blue text-white"
+            >
+              Book Appointment
+            </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="focus:outline-none transition-colors duration-300"
@@ -86,7 +92,7 @@ const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="block py-3 transition-colors duration-300 hover:pl-4 font-medium"
+              className="block py-3 transition-colors duration-300 hover:pl-4 font-medium text-center"
               style={{color: 'oklch(0.35 0.15 15)'}}
               onClick={() => setIsMenuOpen(false)}
             >

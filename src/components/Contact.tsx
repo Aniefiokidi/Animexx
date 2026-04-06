@@ -112,11 +112,11 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Contact Information */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-200 text-center lg:text-left ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-6 sm:mb-8">Consultation & Contact</h3>
             
             <div className="space-y-8">
-              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-accent/10">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-accent/10 text-left">
                 <div className="w-12 h-12 bg-gradient-to-r from-white to-accent/20 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">📍</span>
                 </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-teal-100">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-teal-100 text-left">
                 <div className="w-12 h-12 bg-gradient-to-r from-medical-teal to-medical-emerald rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">📞</span>
                 </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-gold-100">
+              <div className="flex items-start p-5 sm:p-6 bg-white rounded-xl shadow-lg card-hover border border-gold-100 text-left">
                 <div className="w-12 h-12 bg-gradient-to-r from-medical-gold to-white rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                   <span className="text-white text-xl">✉️</span>
                 </div>

@@ -25,7 +25,7 @@ const About = () => {
     <section id="about" className="bg-gray-50 section-padding">
       <div className="container-width">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 text-center md:text-left ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-6 sm:mb-8">About Dr. Aniefiok Idiong</h2>
             <p className="text-medical-gray mb-5 sm:mb-6 text-base sm:text-lg leading-relaxed">
               Dr. Aniefiok Idiong is an experienced Family Doctor and medical consultant
@@ -44,7 +44,7 @@ const About = () => {
             </p>
             
             {/* Key Attributes */}
-            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-8 justify-items-center md:justify-items-start">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-medical-teal rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">✓</span>

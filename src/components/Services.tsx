@@ -114,7 +114,7 @@ const Services = () => {
           {/* Services Navigation */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-              <h3 className="text-2xl font-bold gradient-text mb-6">Our Services</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-6 text-center lg:text-left">Our Services</h3>
               <nav className="space-y-2" role="tablist" aria-label="Medical services">
                 {services.map((service, index) => (
                   <button
@@ -145,11 +145,11 @@ const Services = () => {
               id={`service-panel-${activeService}`}
               role="tabpanel"
               aria-labelledby={`service-tab-${activeService}`}
-              className={`bg-white rounded-2xl shadow-xl p-5 sm:p-8 transition-all duration-500 ${
+              className={`bg-white rounded-2xl shadow-xl p-5 sm:p-8 transition-all duration-500 text-center md:text-left ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
               }`}
             >
-              <div className={`w-20 h-20 bg-gradient-to-r ${services[activeService].gradient} rounded-2xl flex items-center justify-center mb-6`}>
+              <div className={`w-20 h-20 bg-gradient-to-r ${services[activeService].gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0`}>
                 <span className="text-3xl" aria-hidden="true">{services[activeService].icon}</span>
               </div>
               
@@ -164,7 +164,7 @@ const Services = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-xl font-semibold gradient-text mb-4">Service Features:</h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 inline-block text-left">
                     {services[activeService].features.map((feature) => (
                       <li key={feature} className="flex items-center text-medical-gray">
                         <div className="w-2 h-2 bg-gradient-to-r from-white to-accent rounded-full mr-3" aria-hidden="true"></div>

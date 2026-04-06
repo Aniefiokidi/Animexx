@@ -38,8 +38,8 @@ const Footer = () => {
       <div className="container-width py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Practice Information */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
+          <div className="lg:col-span-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start space-x-3 mb-6">
               <img 
                 src="/logo.png" 
                 alt="ANIMEXX NIGERIA LIMITED Logo" 
@@ -53,7 +53,7 @@ const Footer = () => {
               Experienced Family Doctor and medical consultant providing comprehensive primary care
               and professional medical consultation services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 cursor-pointer">
                 <span className="text-sm">📧</span>
               </div>
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-bold mb-6 text--primary">Quick Navigation</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -84,11 +84,11 @@ const Footer = () => {
           </div>
 
           {/* Business Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-bold mb-6 text--primary">Medical Services</h4>
             <ul className="space-y-3">
               {medicalServices.map((service) => (
-                <li key={service} className="flex items-start">
+                <li key={service} className="flex items-start justify-center md:justify-start">
                   <div className="w-2 h-2 bg-medical-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-600 text-sm leading-relaxed">{service}</span>
                 </li>
@@ -97,11 +97,11 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-bold mb-6 text--primary">Contact Information</h4>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-start">
+                <div key={index} className="flex items-start justify-center md:justify-start">
                   <span className="text-lg mr-3">{info.icon}</span>
                   <span className="text--primary text-sm leading-relaxed">{info.text}</span>
                 </div>

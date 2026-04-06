@@ -22,8 +22,8 @@ const Hero = () => {
       
       <div className="container-width section-padding relative z-10">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="mb-6">
+          <div className={`transition-all duration-1000 text-center md:text-left ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="mb-6 flex justify-center md:justify-start">
               <img 
                 src="/logo.png" 
                 alt="Dr. Aniefiok Idiong Logo" 
@@ -34,20 +34,28 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-medical-gold to-white bg-clip-text text-transparent">Dr.(Amb) Aniefiok</span><br />
               <span className="text-white">Idiong</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-4 text-white/90">
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 text-white/90 max-w-3xl mx-auto md:mx-0">
               Family Doctor • Medical Consultant • Professional Healthcare • Community Leader
             </p>
-            <p className="text-base sm:text-lg mb-7 sm:mb-8 leading-relaxed text-white/80">
+            <p className="text-base sm:text-lg mb-7 sm:mb-8 leading-relaxed text-white/80 max-w-2xl mx-auto md:mx-0">
               Experienced Family Doctor and medical consultant providing comprehensive primary care
               and professional medical consultations for patients in Lagos, Nigeria.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button 
-                className="btn btn-gold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            <div className="mb-3 sm:mb-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-white text-medical-navy px-5 py-2 text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Book Appointment Now
+              </a>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+              <a
+                href="#contact"
+                className="btn btn-gold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto text-center"
               >
                 Get Started Today
-              </button>
+              </a>
               <button 
                 className="btn border-2 border-white text-white hover:bg-white hover:text-gray-800 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
@@ -57,12 +65,12 @@ const Hero = () => {
             </div>
           </div>
           <div className={`flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative">
+            <div className="relative w-full flex justify-center">
               <a
                 href={linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-[min(22rem,92vw)] h-[min(22rem,92vw)] sm:w-96 sm:h-96 bg-gradient-to-br from-white to-white/20 rounded-full backdrop-blur-sm border border-white/20 floating-animation hover:scale-[1.02] transition-transform duration-300"
+                className="block w-[min(22rem,88vw)] h-[min(22rem,88vw)] sm:w-96 sm:h-96 bg-gradient-to-br from-white to-white/20 rounded-full backdrop-blur-sm border border-white/20 floating-animation hover:scale-[1.02] transition-transform duration-300 mx-auto"
                 aria-label="Open Dr. Aniefiok Idiong LinkedIn profile"
               >
                 <div className="h-full w-full flex flex-col items-center justify-center px-5 sm:px-8 text-center">
@@ -84,10 +92,10 @@ const Hero = () => {
                   </div>
                 </div>
               </a>
-              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-medical-gold rounded-full flex items-center justify-center shadow-lg">
+              <div className="hidden sm:flex absolute -bottom-4 -right-4 w-24 h-24 bg-medical-gold rounded-full items-center justify-center shadow-lg">
                 <div className="text-2xl">⭐</div>
               </div>
-              <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-14 h-14 sm:w-20 sm:h-20 bg-[#0A66C2] rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute top-3 left-3 sm:-top-4 sm:-left-4 w-14 h-14 sm:w-20 sm:h-20 bg-[#0A66C2] rounded-full flex items-center justify-center shadow-lg">
                 <div className="text-xl font-bold text-white">in</div>
               </div>
             </div>

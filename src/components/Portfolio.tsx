@@ -135,12 +135,12 @@ const Portfolio = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.title} 
-              className={`bg-white p-5 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 ${
+              className={`bg-white p-5 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 text-center md:text-left ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className={`w-16 h-16 bg-gradient-to-r from-white to-accent/20 rounded-2xl flex items-center justify-center mb-6`}>
+              <div className={`w-16 h-16 bg-gradient-to-r from-white to-accent/20 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0`}>
                 <span className="text-2xl">{project.icon}</span>
               </div>
               
