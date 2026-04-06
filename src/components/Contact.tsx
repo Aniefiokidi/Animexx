@@ -303,7 +303,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Please describe your business needs, project requirements, or how we can assist you. We'll review this and get back to you with the best solution."
+                    placeholder="Please describe your symptoms, medical concerns, or consultation request. Dr. Idiong's office will review your message and contact you with the next steps."
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-medical-blue focus:border-medical-blue transition-all duration-300 resize-none"
                   ></textarea>
                 </div>
