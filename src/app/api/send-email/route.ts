@@ -241,26 +241,28 @@ export async function POST(request: Request) {
       console.log('send-email: office notification and booking confirmation sent')
       return NextResponse.json({ ok: true, provider: 'smtp' })
     } catch (smtpErr: any) {
-      const canFallbackToBrevo = Boolean(brevoApiKey && from && to)
-      if (!canFallbackToBrevo) {
+      if (!brevoApiKey || !from || !to) {
         throw smtpErr
       }
+
+      const brevoFrom = from
+      const officeTo = to
 
       console.warn('send-email: SMTP failed, falling back to Brevo API', smtpErr?.message || smtpErr)
       const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('Mail send timed out')), 15000))
       await Promise.race([
         Promise.all([
           sendViaBrevoApi({
-            apiKey: brevoApiKey as string,
-            from,
-            to,
+            apiKey: brevoApiKey,
+            from: brevoFrom,
+            to: officeTo,
             subject,
             html: adminHtml,
             text: adminText,
           }),
           sendViaBrevoApi({
-            apiKey: brevoApiKey as string,
-            from,
+            apiKey: brevoApiKey,
+            from: brevoFrom,
             to: body.email,
             subject: confirmationSubject,
             html: confirmationHtml,
